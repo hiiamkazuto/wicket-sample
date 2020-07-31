@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<span wicket:id="feedback">エラーメッセージ</span>
+<form wicket:id="uploadForm">
+    アップロードファイル:
+    <input type="file" value="" wicket:id="uploadField" />
+    <input type="submit" value="送信" wicket:id="uploadButton" />
+</form>
+
+<hr/>
+<!--上に表示するナビゲータ-->
+<div wicket:id="navigator1" style="width:100%; text-align:center"/>
+<hr/>
+<table wicket:id="table" style="width:100%">
+    <tr>
+        <td style="width: 300px">ファイル名</td>
+        <td style="text-align:right;padding-right:10px">ファイルサイズ</td>
+        <td>更新日</td>
+    </tr>
+    <tr wicket:id="uploadList">
+        <td style="width:100px">
+            <a wicket:id="downloadLink">
+                <span wicket:id="fileName">a.txt</span>
+            </a>
+        </td>
+        <td wicket:id="fileSize" style="text-align:right;padding-right:10px">
+            1024B
+        </td>
+        <td wicket:id="uploadTime">2008/03/30</td>
+    </tr>
+</table>
+
+<hr/>
+<!--下に表示するナビゲータ-->
+<div wicket:id="navigator2" style="width:100%; text-align:center"/>
+<hr/>
+</body>
+</html>

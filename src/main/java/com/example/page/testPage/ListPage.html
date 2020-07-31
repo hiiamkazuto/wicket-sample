@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <style>
+        div {
+            text-align: center;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444444;
+            padding: 10px;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title> ListPage</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr class="yellow">
+            <td>ID</td>
+            <td>部署</td>
+            <td>職位</td>
+            <td>性別</td>
+        </tr>
+        <!-- 繰り返し箇所 start -->
+        <tr wicket:id="repeat">
+            <td><span wicket:id="id"></span></td>
+            <td><span wicket:id="dep"></span></td>
+            <td><span wicket:id="rank"></span></td>
+            <td><span wicket:id="sex"></span></td>
+        </tr>
+        <!-- 繰り返し箇所 end -->
+    </table>
+    <br />
+    <div wicket:id="navigator"></div>
+</div>
+</body>
+</html>
